@@ -27,12 +27,14 @@ const BTN_BUY = document.getElementById('btn-buy');
     let verifyStorage = JSON.parse(localStorage.getItem("log"));
     if (verifyStorage.log){
         SESION_CLOSE.classList.remove('ocultar');
+        SESION_CLOSE.classList.add('close-session');
     }
 }
 
 SESION_CLOSE.addEventListener("click", () => {
     if (localStorage.getItem("log")){
         SESION_CLOSE.classList.add('ocultar');
+        SESION_CLOSE.classList.remove('close-session');
         localStorage.removeItem("log");
     }
 

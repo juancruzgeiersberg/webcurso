@@ -46,8 +46,8 @@
                         <li><a href="../index.html">Postres</a></li>
                         <li><a href="./register.html">Registrarse</a></li>
                         <li><a href="./login.html">Ingresar</a></li>
-                        <li><a class="close-session ocultar" id="close-session">Cerrar sesion</a></li>
                     </ul>
+                    <a class="close-session ocultar" id="close-session">Salir</a>
                 </div>
             </section>
         </nav>
@@ -61,38 +61,22 @@
                     <h3 class="title-login">Encargo</h3>
                     <div>
                         <label for="">Producto: </label>
-                        <input type="text" name="torta o postre" id="product_selected" class="input-form" placeholder="Usuario" maxlength="12" required><span>*</span>
+                        <input type="text" name="torta o postre" id="product_selected" class="input-form" disabled>
                     </div>
                     <div>
-                        <label for="">Password: </label>
-                        <input type="password" name="password" id="password_form" class="input-form" placeholder="Password" maxlength="12" required><span>*</span>
+                        <label for="">Cantidad: </label>
+                        <input type="number" name="Cantidad" id="password_form" class="input-form" placeholder="Cantidad que desea comprar" required><span>*</span>
                     </div>
                     <div>
                         <label for="">Indicaciones Especiales: </label>
                         <textarea name="Indicaciones" id="" cols="30" rows="10" placeholder="Forma de preparación / Alergias / No me gusta / Condicion(ej: Celiaquia) / ETC."></textarea>
                     </div>
                     <div>
-                        <label for="">E-mail: </label>
+                        <label for="">Dirección: </label>
                         <input type="email" name="email" id="email_form" class="input-form" placeholder="ejemplo@hotmail.com" required><span>*</span>
                     </div>
-                    <div class="captcha-validation">
-                        <button id="actualizar_captcha" class="btn-actualizar-captcha">
-                            <ion-icon name="reload-circle-outline" id="icon-captcha-random" class="icon-btn"></ion-icon>
-                        </button>
-                        <input type="text" id="captcha-random" class="value-captcha captcha" disabled>
-                        <input type="text" id="validation-captcha" class="captcha">
-                        <button id="btn-validation-captcha" class="btn-validar-captcha">
-                            <ion-icon name="checkmark-circle-outline" id="icon-captcha-validation" class="icon-btn"></ion-icon>
-                        </button>
-                    </div>
-                    <p id="result-captcha" class="text-center"></p>
-                    <div>
-                        <label for="checkbox-terminos-conficiones">Aceptar Términos y Condiciones:</label>
-                        <input type="checkbox" id="checkbox-terminos-condiciones" class="checkbox-form" disabled>
-                    </div>
-                    <div>
-                        <label for="">Enviar: </label>
-                        <input type="submit" value="Confirmar" id="btn_submit" class="btn-off" disabled>
+                    <div class="btn-buy">
+                        <input type="submit" value="Confirmar" id="btn-buy" class="btn-on" >
                     </div>
                 </div>
             </form>
@@ -147,7 +131,6 @@
             </div>
         </div>
     </footer>
-    <script src="../js/js-register.js"></script>
     <script src="../js/js-buy.js"></script>
     <script src="../js/js-index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>

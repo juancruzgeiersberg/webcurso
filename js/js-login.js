@@ -71,6 +71,7 @@ BTN_LOGIN.addEventListener('click', (e) => {
 
             localStorage.setItem("log",JSON.stringify(user_log));
             SESION.classList.remove('ocultar');
+            SESION.classList.add('close-session');
             location.href = "../index.html";
         }
     }

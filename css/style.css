@@ -186,8 +186,8 @@ header{
 }
 
 /*Quita el estilo de los hipervinculos y le da color*/
-.left-panel ul li a{
-    color: #ff067a;
+.left-panel ul li a, .close-session{
+    color: var(--color_dark_pink);
     text-decoration: none;
 }
 /*Tamaño y estilo de la tipografía del menú*/
@@ -197,19 +197,23 @@ header{
     font-family: sans-serif;
 }
 /*Estilo de las opciones del menú cuando se pone el mouse encima*/
-.left-panel ul li:hover {
+.left-panel ul li:hover, .close-session:hover {
     background-color: var(--color_light_black);
 }
 /*Estilo de los iconos del botón que despliega el menú*/
 .icon-menu-responsive{
     position: absolute;
-    color: #ff067a;
+    color: var(--color_dark_pink);
     z-index: 1100;
 }
 
 .close-session {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
 }
+
 
 /***********************************************
             FIN BOTONES DEL MENÚ
@@ -258,14 +262,14 @@ main{
     height: 200px;
     max-width: 300px;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--color_light_black);
 }
 .food-box p{
     height: 200px;
     border-radius: 10px;
     position: absolute;
-    background-color: #00000044;
-    color:white;
+    background-color: var(--color-black);
+    color:var(--color_white);
 }
 .food-box:hover p{
     display: block;
@@ -311,9 +315,9 @@ main{
     font-weight: bold;
     font-size: 0.8rem;/*Cambia el tamaño del texto*/
     font-family: sans-serif;/*Cambia la fuente del texto*/
-    background-color: #ffffff;/*Cambia el color al fondo del formulario*/
+    background-color: var(--color_white);/*Cambia el color al fondo del formulario*/
     color: var(--color_light_black);
-    box-shadow: 1px 1px 10px #ff227e;/*Dá un sombreado al formulario*/
+    box-shadow: 1px 1px 10px var(--color_pink);/*Dá un sombreado al formulario*/
     font-size: 18px;
     margin: 5px;/*Establece un margin fíjo*/
     padding: 5px;/*Establece un padding fíjo*/
@@ -322,11 +326,13 @@ main{
 /*Estílo de los divs del formulario*/
 /* Creating a form with a div inside. */
 .formulario div {
-    display: flex;/*Aplíca flex para acomodar los elementos*/
-    /*justify-content: center;Centra horizontalmente los elementos*/
+    display: flex;/*Aplíca flex para acomodar los elementos*//*justify-content: center;Centra horizontalmente los elementos*/
     align-items: center;/*Centra verticalmente los elementos*/
     width: 100%;/*Dá un ancho que varía con el tamaño del padre*/
     margin-top: 3%;/*Dá un margin que varía con el tamaño del padre*/
+}
+.btn-buy{
+    justify-content: center;
 }
 .checkbox-form{
     width: 25%;
@@ -346,36 +352,34 @@ main{
     height: 25px;/*Dá un alto fíjo*/
     outline: none;
     border: none;
-    color: #252525;
-    border-bottom: solid 1px #f13a80;
+    color: var(--color_light_black);
+    border-bottom: solid 1px var(--color_pink);
     padding: 0 5px;
     font-size: 15px;
 }
 /*Botón del formulario ACTIVADO*/
 .btn-on{
-    color: #fff;
+    color: var(--color_white);
     border: none;
-    background: #ff6ca4;/*linear-gradient(to right, #ff32a3, #ff106b);*/
+    background: var(--color_pink);
     padding: 10px 15px;
     cursor: pointer;
     font-size: 20px;
     width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
-    margin-left: 10%;/*Dá un margin izquierdo que varía con el tamaño del padre*/
 }
 /*Botón del formulario DESACTIVADO*/
 .btn-off{
-    color: #fff;
+    color: var(--color_white);
     border: none;
-    background: #666666;/*linear-gradient(to right, #ff32a3, #ff106b);*/
+    background: var(--color_grey);
     padding: 10px 15px;
     font-size: 20px;
     width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
 }
 /*Botón del formulario ACTIVADO con hover*/
 .btn-on:hover{
-    background-color: var(--color_grey);/*Cambia el color del fondo*/
+    background-color: var(--color_dark_pink);/*Cambia el color del fondo*/
     cursor:pointer;/*Cambia el puntero del mouse por una mano*/
-    font-weight: bold;/*Cambia el tipo de texto a Negrita*/
 }
 /*Estilo del texto que se muestra después de enviar correctamente el formulario*/
 #correct-submit-form {
@@ -404,9 +408,9 @@ main{
 }
 /*Valor random del captcha*/
 .value-captcha {
-    background-color: #fc3a95;/*Cambia el color del fondo*/
+    background-color: var(--color_dark_pink);/*Cambia el color del fondo*/
     color: var(--color_black_tras);/*Cambia el color del texto*/
-    border-color: #fc3a9498;/*Cambia el color del borde*/
+    border: none;
 }
 /*Botones del captcha*/
 .btn-actualizar-captcha, .btn-validar-captcha {
@@ -416,12 +420,12 @@ main{
 }
 /*Icono que se muestra como botón del captcha*/
 .icon-btn {
-    color: #fc3a95;/*Cambia el color del icono*/
+    color: var(--color_dark_pink);/*Cambia el color del icono*/
     cursor: pointer;/*Cambia el cursor a una mano cuando se posiciona encima*/
 }
 /*Icono del captcha con hover*/
 .icon-btn:hover {
-    color: #fc3a9498;/*Cambia el color del icono*/
+    color: var(--color_light_pink);/*Cambia el color del icono*/
 }
 /*Texto que se muestra después de validar correctamente o incorrectamente el captcha*/
 .result-validation-captcha {
