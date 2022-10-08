@@ -1,0 +1,752 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+.text-center{
+    text-align: center;
+}
+.container{
+    width: 90%;
+}
+.ocultar{
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+body{
+    background: var(--color_light_pink);
+}
+/**********************************************************************
+                            INICIO HEADER
+**********************************************************************/
+header{
+    box-shadow: 1px 1px 20px var(--color_light_black);
+    z-index: 1000;
+}
+
+.container-header{
+    width: 100%;
+    background: var(--color_pink);
+    color: var(--color_light_black);
+}
+
+.fixed-bar{
+    position: fixed;
+}
+
+/*Contenedor de todos los elementos del header*/
+.container-header-up {
+    display: flex;
+    
+}
+
+.img-logo-header{
+    width: 50px;
+}
+
+.logo-page{
+    width: 15%;
+}
+
+.tittle-header{
+    text-align: center;
+    line-height: 300%;
+    font-size: .7rem;
+    width: 70%;
+}
+.tittle-header p{
+    font-size: 1.3rem;
+}
+
+/*Contenedor del icono de buscar*/
+.container-search{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 15%;
+}
+
+/*Contenedor Buscar*/
+.search {
+    position: relative;
+    padding: 5px;
+}
+/*Input de Buscar*/
+.search input {
+    width: 0;
+    height: 40px;
+    padding: 0 18px;
+    font-size: 18px;
+    color: #222;
+    outline: none;
+    border: 1px solid #c0c0c0;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+    box-shadow: 1px 1px 5px #ff067a;
+}
+/*Botón de Buscar*/
+.btn {
+    margin-top: 1px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background: #ff067a;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 40%;
+    cursor: pointer;
+}
+/*Icono de Buscar*/
+.icon-search{
+    padding-top: 12px;
+}
+/*Input Buscar con Hover*/
+.search:hover input {
+    width: 200px;
+}
+/*Input Buscar con Focus*/
+.search input:focus {
+    width: 200px;
+}
+
+/**********************************************************************
+                           INICIO NAV
+**********************************************************************/
+
+
+
+.contenedor-bajo-header{
+    display: flex;
+}
+/*Acomoda el contenído del bajo header*/
+.contenedor-bajo-header {
+    align-items: center;/*Centra lso elementos de forma vertical*/
+    justify-content: end;/*Centra los elementos de forma horizontal*/
+}
+.contenedor-bajo-header {
+    background-color: var(--color_black)
+}
+/**************************************
+            BOTONES DEL MENÚ
+***************************************/
+/*Estilo del botón que abre el menú desplegable*/
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color_light_pink);
+    border: 1px solid var(--color_light_black);
+    width: 1rem;
+    height: 1.64rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    font-family: sans-serif;
+    text-align: center;
+    transition: left 1s;
+}
+.menu:hover{
+    background-color: var(--color_pink);
+
+}
+/*Desplazamiento del botón que abre el menú después que se le hace click*/
+.checkbox:checked ~ .menu {
+    left: 50%;
+}
+/*Panel del menú desplegable*/
+.left-panel {
+    width: 50%;
+    height: 100%;
+    background-color: var(--color_pink);
+    position: fixed;
+    top:0;
+    left: -50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 1s;
+    z-index: 15000;
+}
+/*Desplazamiento del panel del menú*/
+.checkbox:checked ~ .left-panel {
+    left:0;
+}
+/*Quita el estilo de lista del menú*/
+.left-panel ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+/*Quita el estilo de los hipervinculos y le da color*/
+.left-panel ul li a{
+    color: #ff067a;
+    text-decoration: none;
+}
+/*Tamaño y estilo de la tipografía del menú*/
+.left-panel {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+/*Estilo de las opciones del menú cuando se pone el mouse encima*/
+.left-panel ul li:hover {
+    background-color: var(--color_light_black);
+}
+/*Estilo de los iconos del botón que despliega el menú*/
+.icon-menu-responsive{
+    position: absolute;
+    color: #ff067a;
+    z-index: 1100;
+}
+
+.close-session {
+    cursor: pointer;
+}
+
+/***********************************************
+            FIN BOTONES DEL MENÚ
+************************************************/
+/**********************************************************************
+                            FIN NAV
+**********************************************************************/
+
+/**********************************************************************
+                           INICIO MAIN
+**********************************************************************/
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container-main{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+}
+.container-food{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.food-box{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 140%;
+}
+
+.img-torta{
+    width: 225px;
+    height: 200px;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.food-box p{
+    height: 200px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #00000044;
+    color:white;
+}
+.food-box:hover p{
+    display: block;
+}
+.container-description{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+/**********************************************************************
+                            FIN MAIN
+**********************************************************************/
+/**************************************************************************
+                        INICIO FORMULARIO
+**************************************************************************/
+
+.container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 6.5%;
+}
+
+/*contenedor del formulario*/
+.conteiner-form {
+    min-width: 50%;/*Dá un ancho mínimo*/
+}
+
+/*Contenedor del formulario*/
+/* The above code is applying the CSS to the form. */
+.form {
+    width: 100%;/*Aplica el ancho dinámico que escala con el tamaño del padre*/
+    display: flex;/*Aplíca flex al contenedor para acomodar los elementos del formulario*/
+    justify-content: center;/*Acomoda de forma horizontal los elementos*/
+    align-items: center;/*Acomoda de forma vertical los elementos*/
+}
+
+/*Estilo del formulario*/
+/* Setting the CSS for the form. */
+.formulario {
+    font-weight: bold;
+    font-size: 0.8rem;/*Cambia el tamaño del texto*/
+    font-family: sans-serif;/*Cambia la fuente del texto*/
+    background-color: #ffffff;/*Cambia el color al fondo del formulario*/
+    color: var(--color_light_black);
+    box-shadow: 1px 1px 10px #ff227e;/*Dá un sombreado al formulario*/
+    font-size: 18px;
+    margin: 5px;/*Establece un margin fíjo*/
+    padding: 5px;/*Establece un padding fíjo*/
+    text-align: center;/*Centra el texto*/
+}
+/*Estílo de los divs del formulario*/
+/* Creating a form with a div inside. */
+.formulario div {
+    display: flex;/*Aplíca flex para acomodar los elementos*/
+    /*justify-content: center;Centra horizontalmente los elementos*/
+    align-items: center;/*Centra verticalmente los elementos*/
+    width: 100%;/*Dá un ancho que varía con el tamaño del padre*/
+    margin-top: 3%;/*Dá un margin que varía con el tamaño del padre*/
+}
+.checkbox-form{
+    width: 25%;
+    height: 20px;
+}
+/*Estílo Label del formulario*/
+.formulario label {
+    width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
+    text-align: center;/*Posiciona el texto al final de la línea*/
+}
+/*Estilo de los input dentro de los div del formulario*/
+.input-form {
+    font-weight: bold;/*Cambia texto a negríta*/
+    font-size: 15px;/*Cambia el tamaño del texto*/
+    font-family: sans-serif;/*Cambia la fuente del texto*/
+    width: 60%;/*Dá un ancho que varía con el tamaño del padre*/
+    height: 25px;/*Dá un alto fíjo*/
+    outline: none;
+    border: none;
+    color: #252525;
+    border-bottom: solid 1px #f13a80;
+    padding: 0 5px;
+    font-size: 15px;
+}
+/*Botón del formulario ACTIVADO*/
+.btn-on{
+    color: #fff;
+    border: none;
+    background: #ff6ca4;/*linear-gradient(to right, #ff32a3, #ff106b);*/
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
+    margin-left: 10%;/*Dá un margin izquierdo que varía con el tamaño del padre*/
+}
+/*Botón del formulario DESACTIVADO*/
+.btn-off{
+    color: #fff;
+    border: none;
+    background: #666666;/*linear-gradient(to right, #ff32a3, #ff106b);*/
+    padding: 10px 15px;
+    font-size: 20px;
+    width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
+}
+/*Botón del formulario ACTIVADO con hover*/
+.btn-on:hover{
+    background-color: var(--color_grey);/*Cambia el color del fondo*/
+    cursor:pointer;/*Cambia el puntero del mouse por una mano*/
+    font-weight: bold;/*Cambia el tipo de texto a Negrita*/
+}
+/*Estilo del texto que se muestra después de enviar correctamente el formulario*/
+#correct-submit-form {
+    height: auto;/*Aplíca un alto automático*/
+    margin-top: 200px;/*Aplíca un margin en la parte superior*/
+    margin-bottom: 220px;/*Aplíca un margin en la parte inferior*/
+    text-align: center;/*Centra el texto*/
+    font-size: 40px;/*Cambia el tamaño de la fuente del texto*/
+    background-color: var(--color_red);/*Cambiar el color del fondo*/
+    color: var(--color_black);/*Cambia el color del texto*/
+    border-radius: 20px;/*Redondea los bordes*/
+}
+/*Contenedor del captcha*/
+.captcha-validation {
+    display: flex;/*Aplíca flex al contenedor*/
+    justify-content: center;/*Centra el contenido de forma horizontal*/
+}
+/*Inputs del captcha*/
+.captcha {
+    height: 30px;/*Dá un alto fíjo*/
+    min-width: 70px;/*Dá un ancho mínimo fíjo*/
+    max-width: 100px;/*Dá un ancho máximo fíjo*/
+    text-align: center;/*Centra el texto*/
+    font-size: 20px;/*Cambia el tamaño del texto*/
+    font-weight: bold;/*Cambia el tipo de texto a negrita*/
+}
+/*Valor random del captcha*/
+.value-captcha {
+    background-color: #fc3a95;/*Cambia el color del fondo*/
+    color: var(--color_black_tras);/*Cambia el color del texto*/
+    border-color: #fc3a9498;/*Cambia el color del borde*/
+}
+/*Botones del captcha*/
+.btn-actualizar-captcha, .btn-validar-captcha {
+    border: 1px solid transparent;/*Dá un borde*/
+    background: none;/*Quita el fondo*/
+    font-size: 35px;/*Cambia el tamaño del texto*/
+}
+/*Icono que se muestra como botón del captcha*/
+.icon-btn {
+    color: #fc3a95;/*Cambia el color del icono*/
+    cursor: pointer;/*Cambia el cursor a una mano cuando se posiciona encima*/
+}
+/*Icono del captcha con hover*/
+.icon-btn:hover {
+    color: #fc3a9498;/*Cambia el color del icono*/
+}
+/*Texto que se muestra después de validar correctamente o incorrectamente el captcha*/
+.result-validation-captcha {
+    justify-content: center;/*Centra el texto*/
+}
+/*Texto de validación correcto*/
+.validation-correct {
+    color: var(--color_green);/*Cambia el color del texto*/
+}
+/*Texto de validación incorrecto*/
+.validation-incorrect {
+    color: var(--color_red);/*Cambia el color del texto*/
+}
+/*Botones del captcha con validación correcta*/
+.btn-captcha-off {
+    color: var(--color_grey);/*Cambia el color del icono dle botón*/
+    cursor: auto;/*Cambia el tipo de cursor*/
+}
+/*Contenedor div del logo de la página register*/
+.container-logo-register{
+    background: url(../images/logo/logo-login.jpg) center;
+    background-size: cover;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.container-tittle-register{
+    display: flex;
+    justify-content: center;
+}
+
+.container-tittle-register h1{
+    color: var(--color_light_black);
+    width: 300px;
+    text-align: center;
+}
+/**********************************************************************
+                            FIN FORMULARIO
+**********************************************************************/
+
+/**********************************************************************
+                           INICIO LOGIN
+**********************************************************************/
+
+.container-form-login, .container-logo-form-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tittle-welcome, h1{
+    color: #252525;
+}
+
+.logo-login{
+    max-width: 200px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+form .title-login {
+    color: #252525;
+    font-size: 35px;
+    font-weight: 750;
+    margin-bottom: 30px;
+}
+
+form label {
+    display: flex;
+    margin: 15px;
+}
+
+form label .icon-form {
+    font-size: 20px;
+    color: #ff6ca4;
+    margin-right: 10px;
+}
+
+form label input {
+    outline: none;
+    border: none;
+    color: #252525;
+    border-bottom: solid 1px #f13a80;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+form label input::placeholder {
+    color: rgba(37, 37, 37, 0.5);
+}
+
+form .link {
+    color: #252525;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 60%;
+    resize: none;
+    font-size: 15px;
+}
+
+/**********************************************************************
+                             FIN LOGIN
+**********************************************************************/
+
+/**********************************************************************
+                           INICIO FOOTER
+**********************************************************************/
+footer{
+    background-color: var(--color_pink);
+    box-shadow: 1px 1px 20px var(--color_light_black);
+}
+  footer ul{
+    padding:0;
+}
+footer li{
+    list-style: none;
+}
+footer h5, footer h3 {
+    color: var(--color_light_black);
+}
+.wrap-footer{
+    display: grid;
+    grid-template-columns: 30% 15% 15% 20%;
+    column-gap: 5%;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    text-align: center;
+}
+.logo-element_footer{
+    display: flex;
+    margin: 2rem 0;
+}
+.logo-element_footer img{
+    max-height: 75px;
+}
+.text-element-footer{
+    line-height: 1.5;
+}
+.element-footer h5{
+    margin: 1rem 0;
+}
+.element-footer li, .element-footer li a, .redes-sociales-footer li a, footer p{
+    color: #ff2247
+}
+.link-elements-footer li a{
+    text-decoration: none;
+}
+.redes-sociales-footer ul{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.redes-sociales-footer img{
+    width: 35px;
+}
+.redes-sociales-footer li{
+    margin-right: 1rem;
+}
+.redes-sociales-footer li a{
+    font-size: 30px;
+}
+.footer-creds{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    color: #576171;
+    font-size: .9rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.legal-creds ul{
+    display: flex;
+    flex-flow: row;
+}
+.legal-creds ul li{
+    padding-right: 1rem;
+}
+.legal-creds ul a{
+    color: #576171;
+    font-size: .9rem;
+}
+
+.youtube:hover{
+    color: #ff0000;
+}
+.facebook:hover{
+    color: #1717ff;
+}
+.twitter:hover{
+    color: #00eeff;
+}
+.instagram:hover{
+    color: white;
+    background: linear-gradient(#cf00d6, #ff0000,#b4b400);
+    border-radius: 30%;
+}
+/**********************************************************************
+                            FIN FOOTER
+**********************************************************************/
+/* A media query that is telling the browser to change the display of the footer when the screen is
+768px or less. */
+@media (max-width:768px){
+    .wrap-footer{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+  
+/* The above code is making the menu appear when the checkbox is checked. */
+@media (max-width:480px){
+    
+    /* Centering the footer and making it a column. */
+    .wrap-footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* Making the menu appear when the checkbox is checked. */
+    .checkbox:checked ~ .menu {
+        left: 50%;
+        position: fixed;
+    }
+
+    .checkbox:checked ~ body{
+    }
+    
+    .left-panel {
+        width: 50%;
+        left: -50%;
+    }
+    
+    .checkbox:checked ~ .left-panel {
+        left:0;
+        position: fixed;
+    }
+}
+/*Media query que cambia cuando la pantalla tiene un minimo de 500 pixeles de ancho*/
+@media only screen and (min-width: 500px){
+    footer{
+        font-size: 26px;
+    }
+    .tittle-header h1, .tittle-header p{
+        font-size: 25px;
+    }
+    /*Contenedor de todos los elementos del header*/
+    .contenedor-arriba-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    /*Se oculta el botón que despluega el menú responsive*/
+    .menu{
+        display: none;
+    }
+    /*Contenedor de todos los elementos del nav*/
+    .contenedor-bajo-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--color_pink);
+    }
+    /*Cambio de color de los elementos "li" del menú cuando se pone el mouse encima*/
+    .left-panel li:hover {
+        background-color: var(--color-yellow);
+        color: var(--color-black);
+        font-size: 20px;
+    }
+    /*Panel del menú*/
+    .left-panel {
+        position: relative;
+        box-shadow: none;
+        left: 0;
+    }
+    /*Elemento li del panel menú*/
+    .left-panel li {
+        color: var(--color-yellow);
+        padding: 10px;
+        border-left: 1px solid var(var(--color_pink));
+        border-right: 1px solid var(var(--color_pink));
+    }
+    /*Elemento li del panel menú cuando se pone el mouse encima*/
+    .left-panel li:hover {
+        background-color: var(var(--color_black));
+    }
+    /*Elemento ul del panel menú*/
+    .left-panel ul {
+        display: flex;
+    }
+    /*Elementos li en el contenedor global del nav*/
+    .contenedor-bajo-header li {
+        list-style: none;
+    }
+    .container-food{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+
+@media only screen and (min-width: 768px){
+    .container-food{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .food-box p{
+        display: none;
+    }
+    .container-register{
+        flex-direction: row;
+    }
+    .container-form-login{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 1020px){
+    .container-food{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+}

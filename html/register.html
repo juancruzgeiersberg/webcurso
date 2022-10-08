@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <title>Tortas Tía Emilia</title>
+</head>
+<body>
+    <header class="container-header">
+        <div >
+            <div class="container-header-up">
+                <div class="logo-page">
+                    <div class="container-logo">
+                        <a href="../index.html"><img class="img-logo-header" src="../images/logo/logo-login.jpg" alt=""></a>
+                    </div>
+                </div>
+            
+                <div class="tittle-header">
+                    <h1>Tortas Tía Emilia</h1>
+                    <p>Repostería</p>
+                </div>
+                <div class="container-search">
+                    <div class="search">
+                        <input type="text" placeholder="Search" required />
+                
+                        <div class="btn">
+                            <ion-icon class="icon-search" name="search-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <section class="contenedor-bajo-header">
+                <input type="checkbox" class="checkbox ocultar" id="check" style="z-index: 1300;">
+                <label class="menu" for="check">
+                    <ion-icon id="menu-open" class="icon-menu-responsive" name="caret-forward-outline"></ion-icon>
+                    <ion-icon id="menu-close" class="icon-menu-responsive ocultar" name="caret-back-outline"></ion-icon>
+                </label>
+                <div class="left-panel">
+                    <ul>
+                        <li><a href="../index.html">Tortas</a></li>
+                        <li><a href="../index.html">Postres</a></li>
+                        <li><a href="register.html">Registrarse</a></li>
+                        <li><a href="login.html">Ingresar</a></li>
+                        <li><a class="close-session ocultar" id="close-session">Cerrar sesion</a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <div class="container-register">
+        <div class="container-logo-register">
+        </div>
+        <section class="conteiner-form">
+            <form action="" method ="get" class="form" id="form">
+                <div id="form-submit" class="formulario">
+                    <h3 class="title-login">Register</h3>
+                    <div class="container-input-form">
+                        <label for="">Usuario: </label>
+                        <input type="text" name="user" id="user_form" class="input-form" placeholder="Usuario" maxlength="12" required><span>*</span>
+                    </div>
+                    <div>
+                        <label for="">Password: </label>
+                        <input type="password" name="password" id="password_form" class="input-form" placeholder="Password" maxlength="12" required><span>*</span>
+                    </div>
+                    <div>
+                        <label for="">Repita la Password: </label>
+                        <input type="password" name="password" id="re_password_form" class="input-form" placeholder="Password" maxlength="12" required><span>*</span>
+                    </div>
+                    <div>
+                        <label for="">E-mail: </label>
+                        <input type="email" name="email" id="email_form" class="input-form" placeholder="ejemplo@hotmail.com" required><span>*</span>
+                    </div>
+                    <div class="captcha-validation">
+                        <button id="actualizar_captcha" class="btn-actualizar-captcha">
+                            <ion-icon name="reload-circle-outline" id="icon-captcha-random" class="icon-btn"></ion-icon>
+                        </button>
+                        <input type="text" id="captcha-random" class="value-captcha captcha" disabled>
+                        <input type="text" id="validation-captcha" class="captcha">
+                        <button id="btn-validation-captcha" class="btn-validar-captcha">
+                            <ion-icon name="checkmark-circle-outline" id="icon-captcha-validation" class="icon-btn"></ion-icon>
+                        </button>
+                    </div>
+                    <p id="result-captcha" class="text-center"></p>
+                    <div>
+                        <label for="checkbox-terminos-conficiones">Aceptar Términos y Condiciones:</label>
+                        <input type="checkbox" id="checkbox-terminos-condiciones" class="checkbox-form" disabled>
+                    </div>
+                    <div>
+                        <label for="">Enviar: </label>
+                        <input type="submit" value="Confirmar" id="btn_submit" class="btn-off" disabled>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <footer class="footer">
+
+        <div class="wrap-footer">
+            <div class="text-element-footer element-footer">
+                <h3 class="main-c">Tortas Tía Emilia</h3>
+                <p>Repostería</p>
+            </div>
+                <div class="text-element-footer element-footer">
+                    <h5>Ubicación</h5>
+                    <ul>
+                    <li>Av.Sarmiento 999</li>
+                    <li>Código postal - 7635</li>
+                    <li>Tel-movil: (+54) 0123456789</li>
+                    <li>Tel: (+54) 9876543210</li>
+                    </ul>
+                </div>
+            <div class="text-element-footer link-elements-footer element-footer">
+                <h5>Más Información</h5>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/agencia-seo">Nosotros</a></li>
+                    <li><a href="/contacto">Contactar</a></li>
+                </ul>
+            </div>
+        <div class="redes-sociales-footer element-footer">
+            <h5>Redes Sociales</h5>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/tortastiaemilia/" target="_blank" rel="nofollow noopener noreferer"><ion-icon class="facebook" name="logo-facebook" alt="redes sociales"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/tortastiaemilia0905/" target="_blank"><ion-icon class="instagram" name="logo-instagram" alt="redes sociales"></ion-icon></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer-creds">
+            <div class="copy-creds">
+                <p>©2022 · Todos los derechos reservados.</p>
+            </div>
+            <div class="legal-creds">
+                <ul>
+                    <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                    <li><a href="/politica-cookies">Política de Cookies</a></li>
+                    <li><a href="/aviso-legal">Aviso Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/js-index.js"></script>
+    <script src="../js/js-register.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+
+
+/***********************************************************************
+                        INICIO LOGIN
+************************************************************************/
+
+.container-form-login {
+    margin: 5%;
+    background: var(--color_light_pink);/*linear-gradient(to right, #ff32a3, #ff6ca4);*/
+}
+.tittle-welcome, h1{
+    color: #252525;
+}
+
+.logo-login{
+    max-width: 200px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+}
+
+form .title-login {
+    color: #252525;
+    font-size: 35px;
+    font-weight: 750;
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-bottom: 35px;
+}
+
+form label .icon-form {
+    font-size: 20px;
+    color: #ff6ca4;
+    margin-right: 10px;
+}
+
+form label input {
+    outline: none;
+    border: none;
+    color: #252525;
+    border-bottom: solid 1px #f13a80;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+form label input::placeholder {
+    color: rgba(37, 37, 37, 0.5);
+}
+
+form .link {
+    color: #252525;
+    margin-bottom: 15px;
+}
+
+form input[type=submit] {
+    color: #fff;
+    border: none;
+    background: #ff6ca4;/*linear-gradient(to right, #ff32a3, #ff106b);*/
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/***********************************************************************
+                            FIN LOGIN
+************************************************************************/
+
+@media only screen and (min-width: 768px){
+    .container-form-login{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_login.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/colors.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="container-header">
+        <div >
+            <div class="container-header-up">
+                <div class="logo-page">
+                    <div class="container-logo">
+                        <a href="./html/login.html"><img class="img-logo-header" src="../images/logo/logo-login.jpg" alt=""></a>
+                    </div>
+                </div>
+            
+                <div class="tittle-header">
+                    <h1>Tortas Tía Emilia</h1>
+                    <p>Repostería</p>
+                </div>
+                <div class="container-search">
+                    <div class="search">
+                        <input type="text" placeholder="Search" required />
+                
+                        <div class="btn">
+                            <ion-icon class="icon-search" name="search-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <section class="contenedor-bajo-header">
+                <input type="checkbox" class="checkbox ocultar" id="check" style="z-index: 1300;">
+                <label class="menu" for="check">
+                    <ion-icon id="menu-open" class="icon-menu-responsive" name="caret-forward-outline"></ion-icon>
+                    <ion-icon id="menu-close" class="icon-menu-responsive ocultar" name="caret-back-outline"></ion-icon>
+                </label>
+                <div class="left-panel">
+                    <ul>
+                        <li><a href="../index.html">Tortas</a></li>
+                        <li><a href="../index.html">Postres</a></li>
+                        <li><a href="./register.html">Registrarse</a></li>
+                        <li><a href="./login.html">Ingresar</a></li>
+                        <li><a class="close-session ocultar" id="close-session">Cerrar sesion</a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <div class="container-form-login">
+            <div class="container-logo-form-login">
+                <h1>Welcome</h1>
+                <h2 class="tittle-welcome">Tortas Tía Emilia</h2>
+                <img class="logo-login" src="../images/logo/logo-login.jpg" alt="Logo Tortas tía emilia">
+            </div>
+            <form action="">
+                <h3 class="title-login">Login</h3>
+                <label>
+                    <ion-icon class="icon-form" name="person"></ion-icon>
+                    <input placeholder="Username" type="text" id="username" required>
+                </label>
+                <label>
+                    <ion-icon class="icon-form" name="lock-closed"></ion-icon>
+                    <input placeholder="Password" type="password" id="password" required>
+                </label>
+                <a href="./register.html" class="link">Register</a>
+                <a href="#" class="link">Forgot your password?</a>
+                <input type="submit" value="Log-in" id="button">
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+
+        <div class="wrap-footer">
+            <div class="text-element-footer element-footer">
+                <h3 class="main-c">Tortas Tía Emilia</h3>
+                <p>Repostería</p>
+            </div>
+                <div class="text-element-footer element-footer">
+                    <h5>Ubicación</h5>
+                    <ul>
+                    <li>Av.Sarmiento 999</li>
+                    <li>Código postal - 7635</li>
+                    <li>Tel-movil: (+54) 0123456789</li>
+                    <li>Tel: (+54) 9876543210</li>
+                    </ul>
+                </div>
+            <div class="text-element-footer link-elements-footer element-footer">
+                <h5>Más Información</h5>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/agencia-seo">Nosotros</a></li>
+                    <li><a href="/contacto">Contactar</a></li>
+                </ul>
+            </div>
+        <div class="redes-sociales-footer element-footer">
+            <h5>Redes Sociales</h5>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/tortastiaemilia/" target="_blank" rel="nofollow noopener noreferer"><ion-icon class="facebook" name="logo-facebook" alt="redes sociales"></ion-icon></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/tortastiaemilia0905/" target="_blank"><ion-icon class="instagram" name="logo-instagram" alt="redes sociales"></ion-icon></a>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="footer-creds">
+            <div class="copy-creds">
+                <p>©2022 · Todos los derechos reservados.</p>
+            </div>
+            <div class="legal-creds">
+                <ul>
+                    <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                    <li><a href="/politica-cookies">Política de Cookies</a></li>
+                    <li><a href="/aviso-legal">Aviso Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/js-index.js"></script>
+    <script src="../js/js-login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
