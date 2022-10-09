@@ -44,7 +44,7 @@ header{
 }
 
 .img-logo-header{
-    width: 50px;
+    width: 70px;
 }
 
 .logo-page{
@@ -172,6 +172,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     transition: left 1s;
     z-index: 15000;
 }
@@ -186,7 +187,7 @@ header{
 }
 
 /*Quita el estilo de los hipervinculos y le da color*/
-.left-panel ul li a, .close-session{
+.left-panel ul li a, .close-session, .name-product{
     color: var(--color_dark_pink);
     text-decoration: none;
 }
@@ -209,7 +210,7 @@ header{
 
 .close-session {
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -262,6 +263,13 @@ main{
     height: 200px;
     max-width: 300px;
     border-radius: 10px;
+    border: 1px solid var(--color_light_black);
+}
+.img-logo-footer{
+    width: 225px;
+    height: 200px;
+    max-width: 300px;
+    border-radius: 50%;
     border: 1px solid var(--color_light_black);
 }
 .food-box p{
@@ -318,7 +326,7 @@ main{
     background-color: var(--color_white);/*Cambia el color al fondo del formulario*/
     color: var(--color_light_black);
     box-shadow: 1px 1px 10px var(--color_pink);/*Dá un sombreado al formulario*/
-    font-size: 18px;
+    
     margin: 5px;/*Establece un margin fíjo*/
     padding: 5px;/*Establece un padding fíjo*/
     text-align: center;/*Centra el texto*/
@@ -364,8 +372,8 @@ main{
     background: var(--color_pink);
     padding: 10px 15px;
     cursor: pointer;
-    font-size: 20px;
-    width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
+    font-size: 15px;
+    width: 40%;/*Dá un ancho que varía con el tamaño del padre*/
 }
 /*Botón del formulario DESACTIVADO*/
 .btn-off{
@@ -671,7 +679,7 @@ footer h5, footer h3 {
 /*Media query que cambia cuando la pantalla tiene un minimo de 500 pixeles de ancho*/
 @media only screen and (min-width: 500px){
     footer{
-        font-size: 26px;
+        font-size: 20px;
     }
     .tittle-header h1, .tittle-header p{
         font-size: 25px;
@@ -702,6 +710,7 @@ footer h5, footer h3 {
     }
     /*Panel del menú*/
     .left-panel {
+        flex-direction: row;
         position: relative;
         box-shadow: none;
         left: 0;

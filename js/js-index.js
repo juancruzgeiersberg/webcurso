@@ -1,7 +1,6 @@
 const MENU_BAR = document.querySelector(".container-header");
 const FOOTER_BAR = document.querySelector(".footer-page");
 const SESION_CLOSE = document.getElementById('close-session');
-const BTN_BUY = document.getElementById('btn-buy');
 
 /*let sticky = MENU_BAR.offsetTop;*/
 
