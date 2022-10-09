@@ -23,11 +23,13 @@ const BTN_BUY = document.getElementById('btn-buy');
 
 
 
- function verifySession(){
+function verifySession(){
     let verifyStorage = JSON.parse(localStorage.getItem("log"));
-    if (verifyStorage.log){
-        SESION_CLOSE.classList.remove('ocultar');
-        SESION_CLOSE.classList.add('close-session');
+    if (localStorage.getItem("log") !== null){
+        if (verifyStorage.log){
+            SESION_CLOSE.classList.remove('ocultar');
+            SESION_CLOSE.classList.add('close-session');
+        }
     }
 }
 

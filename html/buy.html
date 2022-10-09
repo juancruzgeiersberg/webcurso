@@ -14,7 +14,7 @@
             <div class="container-header-up">
                 <div class="logo-page">
                     <div class="container-logo">
-                        <a href="./html/login.html"><img class="img-logo-header" src="../images/logo-login.jpg" alt=""></a>
+                        <a href="./login.html"><img class="img-logo-header" src="../images/logo/logo-login.jpg" alt=""></a>
                     </div>
                 </div>
             
@@ -61,11 +61,31 @@
                     <h3 class="title-login">Encargo</h3>
                     <div>
                         <label for="">Producto: </label>
-                        <input type="text" name="torta o postre" id="product_selected" class="input-form" disabled>
+                        <select name="productos" id="product_selected" required>
+                            <optgroup label="Tortas:">
+                                <option value="producto 1">Torta 1</option>
+                                <option value="producto 2">Torta 2</option>
+                                <option value="producto 3">Torta 3</option>
+                                <option value="producto 4">Torta 4</option>
+                                <option value="producto 5">Torta 5</option>
+                                <option value="producto 6">Torta 6</option>
+                                <option value="producto 7">Torta 7</option>
+                            </optgroup>
+                            <optgroup label="Postres">
+                                <option value="producto 8">Postre 1</option>
+                                <option value="producto 9">Postre 2</option>
+                                <option value="producto 10">Postre 3</option>
+                                <option value="producto 11">Postre 4</option>
+                                <option value="producto 12">Postre 5</option>
+                                <option value="producto 13">Postre 6</option>
+                                <option value="producto 14">Postre 7</option>
+                            </optgroup>
+                            
+                        </select>
                     </div>
                     <div>
                         <label for="">Cantidad: </label>
-                        <input type="number" name="Cantidad" id="password_form" class="input-form" placeholder="Cantidad que desea comprar" required><span>*</span>
+                        <input type="number" name="Cantidad" id="" class="input-form" placeholder="Cantidad que desea comprar" required><span>*</span>
                     </div>
                     <div>
                         <label for="">Indicaciones Especiales: </label>
@@ -73,7 +93,7 @@
                     </div>
                     <div>
                         <label for="">Dirección: </label>
-                        <input type="email" name="email" id="email_form" class="input-form" placeholder="ejemplo@hotmail.com" required><span>*</span>
+                        <input type="text" name="Dirección" id="" class="input-form" placeholder="ej: Alem 999" required><span>*</span>
                     </div>
                     <div class="btn-buy">
                         <input type="submit" value="Confirmar" id="btn-buy" class="btn-on" >
