@@ -40,25 +40,26 @@ header{
 /*Contenedor de todos los elementos del header*/
 .container-header-up {
     display: flex;
+    justify-content: space-between;
     
 }
-
-.img-logo-header{
-    width: 70px;
-}
-
 .logo-page{
     width: 15%;
 }
 
+.img-logo-header{
+    width: 60px;
+}
+
+
 .tittle-header{
     text-align: center;
     line-height: 300%;
-    font-size: .7rem;
+    font-size: .6rem;
     width: 70%;
 }
 .tittle-header p{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 /*Contenedor del icono de buscar*/
@@ -122,16 +123,15 @@ header{
 
 
 
-.contenedor-bajo-header{
+.contenedor-bajo-header, .container-menu-bar{
     display: flex;
 }
 /*Acomoda el contenído del bajo header*/
-.contenedor-bajo-header {
+.contenedor-bajo-header, .container-menu-bar {
     align-items: center;/*Centra lso elementos de forma vertical*/
-    justify-content: end;/*Centra los elementos de forma horizontal*/
+    justify-content: center;/*Centra los elementos de forma horizontal*/
 }
 .contenedor-bajo-header {
-    background-color: var(--color_black)
 }
 /**************************************
             BOTONES DEL MENÚ
@@ -141,8 +141,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color_light_pink);
-    border: 1px solid var(--color_light_black);
+    background: var(--color_dark_pink);
     width: 1rem;
     height: 1.64rem;
     border-radius: 0 0.5rem 0.5rem 0;
@@ -152,6 +151,8 @@ header{
     font-family: sans-serif;
     text-align: center;
     transition: left 1s;
+    z-index: 10;
+    cursor: pointer;
 }
 .menu:hover{
     background-color: var(--color_pink);
@@ -204,7 +205,7 @@ header{
 /*Estilo de los iconos del botón que despliega el menú*/
 .icon-menu-responsive{
     position: absolute;
-    color: var(--color_dark_pink);
+    color: var(--color_light_pink);
     z-index: 1100;
 }
 
@@ -213,6 +214,13 @@ header{
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.container-menu-bar{
+    display: flex;
+    flex-direction: row;
 }
 
 
@@ -257,6 +265,13 @@ main{
     text-align: center;
     line-height: 140%;
 }
+.food-box:hover{
+    transform: scale(1.08);
+    transition: transform .5s ease;
+}
+.food-box a {
+    text-decoration: none;
+}
 
 .img-torta{
     width: 225px;
@@ -264,6 +279,7 @@ main{
     max-width: 300px;
     border-radius: 10px;
     border: 1px solid var(--color_light_black);
+    box-shadow: 10px 10px 10px var(--color_light_black);
 }
 .img-logo-footer{
     width: 225px;
@@ -317,6 +333,15 @@ main{
     align-items: center;/*Acomoda de forma vertical los elementos*/
 }
 
+.form-login{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+}
+
 /*Estilo del formulario*/
 /* Setting the CSS for the form. */
 .formulario {
@@ -326,14 +351,20 @@ main{
     background-color: var(--color_white);/*Cambia el color al fondo del formulario*/
     color: var(--color_light_black);
     box-shadow: 1px 1px 10px var(--color_pink);/*Dá un sombreado al formulario*/
-    
     margin: 5px;/*Establece un margin fíjo*/
     padding: 5px;/*Establece un padding fíjo*/
     text-align: center;/*Centra el texto*/
+    padding: 20px 25px;
 }
 /*Estílo de los divs del formulario*/
 /* Creating a form with a div inside. */
 .formulario div {
+    width: 100%;/*Dá un ancho que varía con el tamaño del padre*/
+    margin-top: 3%;/*Dá un margin que varía con el tamaño del padre*/
+    display: flex;
+    align-items: center;
+}
+.form-buy{
     display: flex;/*Aplíca flex para acomodar los elementos*//*justify-content: center;Centra horizontalmente los elementos*/
     align-items: center;/*Centra verticalmente los elementos*/
     width: 100%;/*Dá un ancho que varía con el tamaño del padre*/
@@ -351,29 +382,15 @@ main{
     width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
     text-align: center;/*Posiciona el texto al final de la línea*/
 }
-/*Estilo de los input dentro de los div del formulario*/
-.input-form {
-    font-weight: bold;/*Cambia texto a negríta*/
-    font-size: 15px;/*Cambia el tamaño del texto*/
-    font-family: sans-serif;/*Cambia la fuente del texto*/
-    width: 60%;/*Dá un ancho que varía con el tamaño del padre*/
-    height: 25px;/*Dá un alto fíjo*/
-    outline: none;
-    border: none;
-    color: var(--color_light_black);
-    border-bottom: solid 1px var(--color_pink);
-    padding: 0 5px;
-    font-size: 15px;
-}
+
 /*Botón del formulario ACTIVADO*/
 .btn-on{
     color: var(--color_white);
     border: none;
-    background: var(--color_pink);
+    background: var(--color_dark_pink);
     padding: 10px 15px;
     cursor: pointer;
     font-size: 15px;
-    width: 40%;/*Dá un ancho que varía con el tamaño del padre*/
 }
 /*Botón del formulario DESACTIVADO*/
 .btn-off{
@@ -381,12 +398,12 @@ main{
     border: none;
     background: var(--color_grey);
     padding: 10px 15px;
-    font-size: 20px;
-    width: 30%;/*Dá un ancho que varía con el tamaño del padre*/
+    font-size: 15px;
+    width: 40%;/*Dá un ancho que varía con el tamaño del padre*/
 }
 /*Botón del formulario ACTIVADO con hover*/
 .btn-on:hover{
-    background-color: var(--color_dark_pink);/*Cambia el color del fondo*/
+    background-color: var(--color_pink);/*Cambia el color del fondo*/
     cursor:pointer;/*Cambia el puntero del mouse por una mano*/
 }
 /*Estilo del texto que se muestra después de enviar correctamente el formulario*/
@@ -485,6 +502,19 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 5%;
+}
+.container-input-log{
+    display: flex;
+    justify-content: center;
+}
+.input-form{
+    outline: none;
+    border: none;
+    color: #252525;
+    border-bottom: solid 1px #f13a80;
+    padding: 0 5px;
+    font-size: 18px;
 }
 .tittle-welcome, h1{
     color: #252525;
@@ -496,7 +526,7 @@ main{
     border-radius: 50%;
 }
 
-form .title-login {
+.title-login {
     color: #252525;
     font-size: 35px;
     font-weight: 750;
@@ -508,7 +538,7 @@ form label {
     margin: 15px;
 }
 
-form label .icon-form {
+.icon-form {
     font-size: 20px;
     color: #ff6ca4;
     margin-right: 10px;
@@ -537,6 +567,7 @@ textarea {
     resize: none;
     font-size: 15px;
 }
+
 
 /**********************************************************************
                              FIN LOGIN

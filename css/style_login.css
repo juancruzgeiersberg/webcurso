@@ -5,6 +5,9 @@
                         INICIO LOGIN
 ************************************************************************/
 
+.container-form-login, .container-logo-form-login{
+    flex-direction: column;
+}
 .container-form-login {
     margin: 5%;
     background: var(--color_light_pink);/*linear-gradient(to right, #ff32a3, #ff6ca4);*/
@@ -63,7 +66,7 @@ form .link {
     margin-bottom: 15px;
 }
 
-form input[type=submit] {
+.form input[type=submit] {
     color: #fff;
     border: none;
     background: #ff6ca4;/*linear-gradient(to right, #ff32a3, #ff106b);*/

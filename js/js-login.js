@@ -33,8 +33,17 @@ const userArray = [
 
 /*Se carga el localStorage con el array de usuarios registrados*/
 function cargarStorage(){
-    if (localStorage.getItem("users") === null || localStorage.getItem("users") === undefined){
+    let verify = JSON.parse(localStorage.getItem("users"));
+    let log = JSON.parse(localStorage.getItem("log"));
+    if (verify === null || verify === undefined){
         localStorage.setItem("users", JSON.stringify(userArray));
+    }else{
+        if (log !== null){
+            if (log.log === true){
+                USERNAME.classList.toggle('ocultar');
+                PASSWORD.classList.toggle('ocultar');
+            }
+        }
     }
 }
     
@@ -47,7 +56,6 @@ function verifyUser(user,pass){
     userArray2.forEach(element => {
         if(user == element.user && pass == element.password){
             verify = true;
-            console.log("true");
             return true;
         }
         indice++

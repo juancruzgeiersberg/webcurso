@@ -35,7 +35,7 @@
         </div>
         <nav>
             <section class="contenedor-bajo-header">
-                <input type="checkbox" class="checkbox ocultar" id="check" style="z-index: 1300;">
+                <input type="checkbox" class="checkbox ocultar" id="check">
                 <label class="menu" for="check">
                     <ion-icon id="menu-open" class="icon-menu-responsive" name="caret-forward-outline"></ion-icon>
                     <ion-icon id="menu-close" class="icon-menu-responsive ocultar" name="caret-back-outline"></ion-icon>
@@ -45,9 +45,11 @@
                         <li><a href="../index.html">Tortas</a></li>
                         <li><a href="./postres.html">Postres</a></li>
                         <li><a href="./register.html">Registrarse</a></li>
-                        <li><a href="./login.html">Ingresar</a></li>
                     </ul>
-                    <a class="close-session ocultar" id="close-session">Salir</a>
+                    <div>
+                        <a href="./login.html" class="close-session" id="log">Ingresar</a>
+                        <button class="close-session ocultar" id="close-session">Salir</button>
+                    </div>
                 </div>
             </section>
         </nav>
@@ -59,19 +61,19 @@
             <form action="" method ="get" class="form">
                 <div id="form-submit" class="formulario">
                     <h3 class="title-login">Encargo</h3>
-                    <div>
+                    <div class="form-buy">
                         <label for="">Producto: </label>
                         <input type="text" class="input-form" id="product_selected" disabled>
                     </div>
-                    <div>
+                    <div class="form-buy">
                         <label for="">Cantidad: </label>
                         <input type="number" name="Cantidad" id="" class="input-form" placeholder="Cantidad que desea comprar" required><span>*</span>
                     </div>
-                    <div>
+                    <div class="form-buy">
                         <label for="">Indicaciones: </label>
                         <textarea name="Indicaciones" id="" cols="30" rows="10" placeholder="Forma de preparación / Alergias / No me gusta / Condicion(ej: Celiaquia) / ETC."></textarea>
                     </div>
-                    <div>
+                    <div class="form-buy">
                         <label for="">Dirección: </label>
                         <input type="text" name="Dirección" id="" class="input-form" placeholder="ej: Alem 999" required><span>*</span>
                     </div>
@@ -87,6 +89,7 @@
             <div class="text-element-footer element-footer">
                 <h3 class="main-c">Tortas Tía Emilia</h3>
                 <p>Repostería</p>
+                <img class="img-logo-footer" src="../images/logo/logo-footer.png" alt="Logo Footer">
             </div>
                 <div class="text-element-footer element-footer">
                     <h5>Ubicación</h5>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style_login.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/colors.css">
     <title>Document</title>
@@ -46,9 +45,9 @@
                         <li><a href="../index.html">Tortas</a></li>
                         <li><a href="./postres.html">Postres</a></li>
                         <li><a href="./register.html">Registrarse</a></li>
-                        <li><a href="./login.html">Ingresar</a></li>
                     </ul>
-                    <a class="close-session ocultar" id="close-session">Salir</a>
+                    <a href="./login.html" class="close-session" id="log">Ingresar</a>
+                    <button class="close-session ocultar" id="close-session">Salir</button>
                 </div>
             </section>
         </nav>
@@ -60,28 +59,28 @@
                 <h2 class="tittle-welcome">Tortas Tía Emilia</h2>
                 <img class="logo-login" src="../images/logo/logo-login.jpg" alt="Logo Tortas tía emilia">
             </div>
-            <form action="">
+            <form class="form-login" action="">
                 <h3 class="title-login">Login</h3>
-                <label>
+                <label class="container-input-log">
                     <ion-icon class="icon-form" name="person"></ion-icon>
-                    <input placeholder="Username" type="text" id="username" required>
+                    <input placeholder="Username" type="text" class="input-form" id="username" required>
                 </label>
-                <label>
+                <label class="container-input-log">
                     <ion-icon class="icon-form" name="lock-closed"></ion-icon>
-                    <input placeholder="Password" type="password" id="password" required>
+                    <input placeholder="Password" type="password" class="input-form" id="password" required>
                 </label>
                 <a href="./register.html" class="link">Register</a>
                 <a href="#" class="link">Forgot your password?</a>
-                <input type="submit" value="Log-in" id="button">
+                <input type="submit" value="Log-in" class="btn-on" id="button">
             </form>
         </div>
     </main>
     <footer class="footer">
-
         <div class="wrap-footer">
             <div class="text-element-footer element-footer">
                 <h3 class="main-c">Tortas Tía Emilia</h3>
                 <p>Repostería</p>
+                <img class="img-logo-footer" src="../images/logo/logo-footer.png" alt="Logo Footer">
             </div>
                 <div class="text-element-footer element-footer">
                     <h5>Ubicación</h5>
