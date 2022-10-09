@@ -16,13 +16,30 @@ function insertProduct(){
     }
 }
 
-BTN_BUY.addEventListener("click", () => {
-    if (CANT_PRODUCT.value !== "" && DIRECCION.value !== ""){
-        alert("Gracias por su compra!.");
-        INPUT_PRODUCT.value = "";
+function logOn(){
+    let log_on = JSON.parse(localStorage.getItem("log"));
+    if (log_on !== null && log_on !== undefined && log_on.log === true){
+        return true;
     }else{
-        alert("Por favor complete los cambpos obligatorios ( * )")
+        return false;
     }
+}
+
+BTN_BUY.addEventListener("click", (e) => {
+    e.preventDefault();
+    if(logOn()){
+        if (CANT_PRODUCT.value !== "" && DIRECCION.value !== ""){
+            location.href = "../index.html";
+            alert("Gracias por su compra!.");
+            INPUT_PRODUCT.value = "";
+        }else{
+            alert("Por favor complete los cambpos obligatorios ( * )")
+        }
+    }else{
+        location.href = "./login.html";
+        alert("No está conectado, por favor primero ingrese su usario.");
+    }
+
 });
 
 document.addEventListener("DOMContentLoaded", insertProduct());
