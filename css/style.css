@@ -391,6 +391,7 @@ main{
     padding: 10px 15px;
     cursor: pointer;
     font-size: 15px;
+    width: 100%;
 }
 /*Botón del formulario DESACTIVADO*/
 .btn-off{
@@ -399,7 +400,7 @@ main{
     background: var(--color_grey);
     padding: 10px 15px;
     font-size: 15px;
-    width: 40%;/*Dá un ancho que varía con el tamaño del padre*/
+    width: 100%;/*Dá un ancho que varía con el tamaño del padre*/
 }
 /*Botón del formulario ACTIVADO con hover*/
 .btn-on:hover{
