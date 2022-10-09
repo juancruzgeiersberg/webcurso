@@ -32,7 +32,15 @@ BTN_SUBMIT.addEventListener("click", (e) => {
         alert("Debe completar los campos obligatorios ( * ) para poder enviar el formulario.");
     }else{
         if (PASSWORD_FORM.value === RE_PASSWORD_FORM.value){
-            /**/
+            /*Creamos un objeto que vamos a cargar en el localstorage*/
+            let obj_register = {
+                "user": USER_FORM.value,
+                "password": PASSWORD_FORM.value,
+                "email": EMAIL_FORM.value
+            };
+            let arrayUsers = JSON.parse(localStorage.getItem("users"));
+            arrayUsers.push(obj_register);
+            localStorage.setItem("users", JSON.stringify(arrayUsers));
             alert("Gracias por registrarse. " + `Usuario: ${USER_FORM.value} Password: ${PASSWORD_FORM.value}`);
             FORM.submit();
         }else{

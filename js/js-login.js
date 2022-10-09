@@ -3,6 +3,7 @@ const PASSWORD = document.getElementById('password');
 const BTN_LOGIN = document.getElementById('button');
 const SESION = document.getElementById('close-session');
 
+/*Arreglo pre cargado con usuarios*/
 const userArray = [
     {
         "user": "juan",
@@ -30,19 +31,20 @@ const userArray = [
         "email": "elias@gmail.com"
     }];
 
+/*Se carga el localStorage con el array de usuarios registrados*/
+function cargarStorage(){
+    if (localStorage.getItem("users") === null || localStorage.getItem("users") === undefined){
+        localStorage.setItem("users", JSON.stringify(userArray));
+    }
+}
     
 
-/**
- * It takes a user and password, and returns true if the user and password match a user in the
- * userArray, and false if they don't.
- * @param user - the username
- * @param pass - the password that the user entered
- * @returns A boolean value.
- */
+/*Verifica los usuarios cargados en el localstorage para saber si existe el usuario*/
 function verifyUser(user,pass){
+    let userArray2 = JSON.parse(localStorage.getItem("users"));
     let indice = 0;
     let verify = false;
-    userArray.forEach(element => {
+    userArray2.forEach(element => {
         if(user == element.user && pass == element.password){
             verify = true;
             console.log("true");
@@ -50,11 +52,12 @@ function verifyUser(user,pass){
         }
         indice++
     });
-     if (indice == userArray.length && verify == false){
+     if (indice == userArray2.length && verify == false){
          verify = false;
      }
     return verify;
 }
+/*Evento del botón para conectarse*/
 BTN_LOGIN.addEventListener('click', (e) => {
     e.preventDefault();
     if ((USERNAME.value == "") || (PASSWORD.value == "")){
@@ -76,3 +79,5 @@ BTN_LOGIN.addEventListener('click', (e) => {
         }
     }
 });
+/*Espera que la pagina esté cargada y después carga el localstorage con el array de usuarios*/
+document.addEventListener('DOMContentLoaded', cargarStorage());
